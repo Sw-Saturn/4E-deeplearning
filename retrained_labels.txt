@@ -1,2 +1,2 @@
-capacitor
-integrated circuit images
+ceramic capacitor
+electronic resistor
