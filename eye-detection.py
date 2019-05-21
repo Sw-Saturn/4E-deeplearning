@@ -6,7 +6,7 @@ eye_cascade_path = 'haarcascades/haarcascade_eye.xml'
 face_cascade = cv2.CascadeClassifier(face_cascade_path)
 eye_cascade = cv2.CascadeClassifier(eye_cascade_path)
 
-src = cv2.imread('./sample.jpeg')
+src = cv2.imread('./sample.jpg')
 src_gray = cv2.cvtColor(src,cv2.COLOR_BGR2GRAY)
 
 faces = face_cascade.detectMultiScale(src_gray)
