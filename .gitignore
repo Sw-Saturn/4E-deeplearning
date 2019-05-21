@@ -2,7 +2,7 @@ downloads/
 *.jpg
 *.JPG
 
-
+img_data/
 # Added by gemignore. Snippet 'Global/macOS'
 # General
 .DS_Store
