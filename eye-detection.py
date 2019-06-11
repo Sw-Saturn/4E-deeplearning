@@ -14,8 +14,7 @@ cap = cv2.VideoCapture(0)
 
 def device_detection():
     process = subprocess.Popen('python label_image.py --graph retrained_graph.pb --labels retrained_labels.txt --input_layer Placeholder --output_layer final_result --image face.jpg', stdout=subprocess.PIPE, shell=True)
-    messagebox.showinfo('結果', process.stdout.decode('utf-8'))
-    # メッセージの受け渡しができていない
+    #結果はresult.json
 
 
 def main():
