@@ -20,6 +20,7 @@ from __future__ import print_function
 import argparse
 
 import numpy as np
+import json
 import tensorflow as tf
 
 
@@ -136,5 +137,10 @@ if __name__ == "__main__":
 
   top_k = results.argsort()[-5:][::-1]
   labels = load_labels(label_file)
+  final_dict = {}
   for i in top_k:
     print(labels[i], results[i])
+    final_dict[labels[i]] = str(results[i])
+
+  with open('result.json','w') as f:
+    json.dump(final_dict,f,indent=4)

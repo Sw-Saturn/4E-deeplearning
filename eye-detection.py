@@ -17,6 +17,7 @@ def device_detection():
     messagebox.showinfo('結果', process.stdout.decode('utf-8'))
     # メッセージの受け渡しができていない
 
+
 def main():
     while True:
         ret,frame = cap.read()
