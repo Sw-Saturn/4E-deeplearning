@@ -72,7 +72,7 @@ def result():
         print(labels[i], results[i])
         final_dict[labels[i]] = str(results[i])
 
-    return jsonify(final_dict, response='success')
+    return jsonify(final_dict)
 
 
 if __name__ == '__main__':

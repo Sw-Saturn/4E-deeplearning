@@ -31,8 +31,11 @@ if __name__ == '__main__':
     obj = {json_key: value}
     # json_data:認識結果などのjsonを入れてもOK
     json_data = json.dumps(obj).encode("utf-8")
+
     # httpリクエストを準備してPOST
     request = urllib.request.Request(url, data=json_data, method=method, headers=headers)
     with urllib.request.urlopen(request) as response:
         response_body = response.read().decode("utf-8")
         print(response_body)
+        with open('test_post.json', 'w') as f:
+            f.write(response_body)
