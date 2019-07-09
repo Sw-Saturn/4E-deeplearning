@@ -4,6 +4,7 @@ import base64
 from label_image import *
 
 app = Flask(__name__)
+app.config['JSON_AS_ASCII'] = False
 
 
 def convert_b64_to_file(b64, outfile_path):
