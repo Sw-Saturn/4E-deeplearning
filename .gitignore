@@ -2,6 +2,7 @@ downloads/
 *.jpg
 *.JPG
 
+data/
 img_data/
 # Added by gemignore. Snippet 'Global/macOS'
 # General

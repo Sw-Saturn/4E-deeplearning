@@ -71,7 +71,8 @@ def result():
     final_dict = {}
     for i in top_k:
         print(labels[i], results[i])
-        final_dict[labels[i]] = str(results[i])
+        results[i] = results[i]*100
+        final_dict[labels[i]] = str('{:.2f}'.format(results[i]))
 
     return jsonify(final_dict)
 
