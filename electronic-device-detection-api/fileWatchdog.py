@@ -42,13 +42,17 @@ def solve_result():
     top_k = results.argsort()[-5:][::-1]
     labels = load_labels(label_file)
     final_dict = {}
+
     for i in top_k:
         results[i] = results[i] * 100
         final_dict[labels[i]] = str('{:.2f}'.format(results[i]))
         print(labels[i], results[i])
 
+    final_dict = dict(sorted(final_dict.items(), key=lambda x: x[1], reverse=True))
+    print(type(final_dict))
+
     with open('result.json', 'w') as f:
-        json.dump(final_dict, f, indent=4)
+        json.dump(final_dict, f, ensure_ascii=True)
 
 
 # PatternMatchingEventHandler の継承クラスを作成
