@@ -49,7 +49,6 @@ def solve_result():
         print(labels[i], results[i])
 
     final_dict = dict(sorted(final_dict.items(), key=lambda x: x[1], reverse=True))
-    print(type(final_dict))
 
     with open('result.json', 'w') as f:
         json.dump(final_dict, f, ensure_ascii=True)
